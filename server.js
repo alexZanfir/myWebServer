@@ -9,9 +9,6 @@ app.get('/about', function(req, res){
 app.use(express.static(__dirname + '/public'));
 
 app.listen(PORT, function () {
-	console.log('My server has started on port '+PORT+'!');
+	console.log('The server has started on port '+PORT+'!');
 });
 
-function myFunction() {
-    document.getElementById("demo").innerHTML = "Paragraph changed.";
-}
