@@ -1,4 +1,4 @@
-var request = require('./node_modules/request');
+var request = require('request');
 
 module.exports = function (location) {
 	return new Promise(function (resolve, reject) {
