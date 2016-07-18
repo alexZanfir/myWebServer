@@ -1,8 +1,9 @@
 var weather = require('./weather.js');
 var location = require('./location.js');
-
+var city = "";
 function myFunction() {
-    document.getElementById("demo").innerHTML = "Paragraph changed.";
+	city = document.getElementById("cityName").value
+    document.getElementById("demo").innerHTML = city;
 }
 // var argv = require('yargs')
 // 	.option('location', {
