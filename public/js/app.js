@@ -1,5 +1,5 @@
-var weather = require('weather.js');
-var location = require('location.js');
+var weather = require('./weather.js');
+var location = require('./location.js');
 var city = "";
 function myFunction() {
 	city = document.getElementById("cityName").value
