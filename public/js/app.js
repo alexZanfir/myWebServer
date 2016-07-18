@@ -6,8 +6,12 @@ function myFunction() {
     
 
     weather(city).then(function (currentWeather)) {
+    	console.log(currentWeather);
+    	console.log(city);
     	document.getElementById("demo").innerHTML = currentWeather;
-    }
+    }).catch(function (error) {
+    	console.log(error);
+    });
 }
 
 
