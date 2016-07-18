@@ -1,4 +1,4 @@
-var request = require('request');
+var request = require('./node_modules/request/request');
 //var url = 'http://ipinfo.io';
   var url = 'http://ip-api.com/json/?fields=city'
 
