@@ -3,8 +3,14 @@ var location = require('./location.js');
 var city = "";
 function myFunction() {
 	city = document.getElementById("cityName").value
-    document.getElementById("demo").innerHTML = city;
+    
+
+    weather(city).then(function (currentWeather)) {
+    	document.getElementById("demo").innerHTML = currentWeather;
+    }
 }
+
+
 // var argv = require('yargs')
 // 	.option('location', {
 // 		alias: 'l',
