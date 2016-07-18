@@ -5,7 +5,7 @@ function myFunction() {
 	city = document.getElementById("cityName").value
     
 
-    weather(city).then(function (currentWeather)) {
+    weather(city).then(function (currentWeather) {
     	console.log(currentWeather);
     	console.log(city);
     	document.getElementById("demo").innerHTML = currentWeather;
