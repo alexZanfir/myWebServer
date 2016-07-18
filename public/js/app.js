@@ -1,15 +1,19 @@
 var city = "";
+// var weather = require('./weather.js');
+// var location = require('./location.js');
+// var request = require('request');
+
 function myFunction() {
 	city = document.getElementById("cityName").value
-    
+    document.getElementById("demo").innerHTML = city;
 
-    weather(city).then(function (currentWeather) {
-    	console.log(currentWeather);
-    	console.log(city);
-    	document.getElementById("demo").innerHTML = currentWeather;
-    }).catch(function (error) {
-    	console.log(error);
-    });
+    // weather(city).then(function (currentWeather) {
+    // 	console.log(currentWeather);
+    // 	console.log(city);
+    // 	document.getElementById("demo").innerHTML = currentWeather;
+    // }).catch(function (error) {
+    // 	console.log(error);
+    // });
 }
 
 

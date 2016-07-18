@@ -1,15 +1,25 @@
 {
   "name": "webServer",
   "version": "1.0.0",
-  "description": "just a server",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "request": "^2.73.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexZanfir/myWebServer.git"
   },
   "author": "Alexandru Zanfir",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.13.2",
-    "request": "^2.60.0"
-  }
+  "bugs": {
+    "url": "https://github.com/alexZanfir/myWebServer/issues"
+  },
+  "homepage": "https://github.com/alexZanfir/myWebServer"
 }

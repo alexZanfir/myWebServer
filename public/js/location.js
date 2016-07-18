@@ -1,8 +1,9 @@
 //var request = require('request');
+var gamma = require('gamma');
 //var url = 'http://ipinfo.io';
   var url = 'http://ip-api.com/json/?fields=city'
 
-module.exports = function () {
+function getLocation() {
 	return new Promise(function (resolve, reject) {
 		request({
 			url: url,
