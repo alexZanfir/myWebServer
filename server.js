@@ -4,15 +4,15 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 var city = "";
-//var weather = require('./weather.js');
-//var location = require('./location.js');
+var weather = require('./public/js/weather.js');
+var location = require('./public/js/location.js');
 
 
 
 
 app.get('/about', function(req, res){
 
-	res.send('Hello About Alex');
+	res.send();
 });
 
 app.use(express.static(__dirname + '/public'));

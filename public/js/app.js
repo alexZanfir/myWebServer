@@ -2,19 +2,35 @@ var city = "";
 // var weather = require('./weather.js');
 // var location = require('./location.js');
 // var request = require('request');
+var weather = require('./weather.js');
+var location = require('./location.js');
 
-function myFunction() {
-	city = document.getElementById("cityName").value
-    document.getElementById("demo").innerHTML = city;
+$('#myButton').click(function (event) {
+	city = $("#cityName").val();
+	console.log(city);
+	if (city === "") {
+			console.log('Location was not provided');
+	console.time('noLocation');
+	location().then(function (loc) {
+		return weather(loc.city);
+	}).then(function (currentWeather) {
+		$('#demo').html(currentWeather);
+		console.timeEnd('noLocation');
+	}).catch(function (error) {
+		console.log(error)
+	});
+} else {
+    //document.getElementById("demo").innerHTML = city;
 
-    // weather(city).then(function (currentWeather) {
-    // 	console.log(currentWeather);
-    // 	console.log(city);
-    // 	document.getElementById("demo").innerHTML = currentWeather;
-    // }).catch(function (error) {
-    // 	console.log(error);
-    // });
+    weather(city).then(function (currentWeather) {
+    	console.log(currentWeather);
+    	console.log(city);
+    	$('#demo').html(currentWeather);
+    }).catch(function (error) {
+    	console.log(error);
+    });
 }
+});
 
 
 // var argv = require('yargs')

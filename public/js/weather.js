@@ -1,6 +1,6 @@
 var request =  require('request');
 
-var weather = function (location) {
+module.exports = function (location) {
 	return new Promise(function (resolve, reject) {
 		var encodedLocation = encodeURIComponent(location);
 		var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + encodedLocation + '&units=metric'+'&APPID=f7010dceedc9ad58857b3c276cad96fe';
